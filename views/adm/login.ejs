@@ -1,0 +1,20 @@
+<%- include('../parts/head',{title:'Pizzaria Fantástica - Login'}); %>
+
+<link rel="stylesheet" href="/css/form-pizza.css">
+<form id="form-pizza" method="POST" action="/adm/login" enctype="application/x-www-form-urlencoded">
+	<label>
+		Email:
+		<input type="email" name="email" id="email" placeholder="pessoa@pizzaria-fantastica.com">
+	</label>
+
+	<label>
+		Senha:
+		<input type="password" name="senha" id="senha" placeholder="Digite sua senha">
+	</label>
+
+    <% if(error) {%>
+        <div><%= error %></div>
+    <% } %>
+	<button type="submit">Salvar</button>
+</form>
+<%- include('../parts/foot'); %>
